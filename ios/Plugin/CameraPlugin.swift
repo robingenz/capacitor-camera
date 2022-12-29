@@ -2,6 +2,7 @@ import Foundation
 import Capacitor
 import Photos
 import PhotosUI
+import MobileCoreServices
 
 @objc(CAPCameraPlugin)
 public class CameraPlugin: CAPPlugin {
