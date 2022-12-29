@@ -685,7 +685,19 @@
               "name": "since"
             }
           ],
-          "docs": "The format of the image, ex: jpeg, png, gif, mov.",
+          "docs": "The file extension of the media, ex: jpeg, png, gif, mov.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "mimeType",
+          "tags": [
+            {
+              "text": "4.2.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The mime type of the media, ex: image/jpeg, image/png, image/gif, video/mov.",
           "complexTypes": [],
           "type": "string"
         }

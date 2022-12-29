@@ -277,11 +277,12 @@ Request camera and photo album permissions
 
 #### GalleryMedia
 
-| Prop          | Type                | Description                                                                                                       | Since |
-| ------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------- | ----- |
-| **`path`**    | <code>string</code> | Full, platform-specific file URL that can be read later using the Filesystem API.                                 | 4.2.0 |
-| **`webPath`** | <code>string</code> | webPath returns a path that can be used to set the src attribute of an image for efficient loading and rendering. | 4.2.0 |
-| **`format`**  | <code>string</code> | The format of the image, ex: jpeg, png, gif, mov.                                                                 | 4.2.0 |
+| Prop           | Type                | Description                                                                                                       | Since |
+| -------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------- | ----- |
+| **`path`**     | <code>string</code> | Full, platform-specific file URL that can be read later using the Filesystem API.                                 | 4.2.0 |
+| **`webPath`**  | <code>string</code> | webPath returns a path that can be used to set the src attribute of an image for efficient loading and rendering. | 4.2.0 |
+| **`format`**   | <code>string</code> | The file extension of the media, ex: jpeg, png, gif, mov.                                                         | 4.2.0 |
+| **`mimeType`** | <code>string</code> | The mime type of the media, ex: image/jpeg, image/png, image/gif, video/mov.                                      | 4.2.0 |
 
 
 #### PermissionStatus

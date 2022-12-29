@@ -430,9 +430,11 @@ public class CameraPlugin extends Plugin {
         JSObject result = new JSObject();
         ContentResolver contentResolver = bridge.getContext().getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        String format = mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+        String mimeTypeAsString = contentResolver.getType(uri);
+        String format = mimeTypeMap.getExtensionFromMimeType(mimeTypeAsString);
         result.put("path", uri.toString());
         result.put("format", format);
+        result.put("mimeType", mimeTypeAsString);
         result.put("webPath", FileUtils.getPortablePath(getContext(), bridge.getLocalUrl(), uri));
         call.resolve(result);
     }

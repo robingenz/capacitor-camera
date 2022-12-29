@@ -436,8 +436,20 @@ private extension CameraPlugin {
         call?.resolve([
             "path": fileURL.absoluteString,
             "webPath": webURL.absoluteString,
-            "format": fileURL.pathExtension
+            "format": fileURL.pathExtension,
+            "mimeType": getMimeTypeFromUrl(fileURL)
         ])
+    }
+
+    func getMimeTypeFromUrl(_ url: URL) -> String {
+        let fileExtension = url.pathExtension as CFString
+        guard let extUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension, nil)?.takeUnretainedValue() else {
+            return ""
+        }
+        guard let mimeUTI = UTTypeCopyPreferredTagWithClass(extUTI, kUTTagClassMIMEType) else {
+            return ""
+        }
+        return mimeUTI.takeRetainedValue() as String
     }
 
     func returnProcessedImage(_ processedImage: ProcessedImage) {

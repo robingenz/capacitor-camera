@@ -267,11 +267,17 @@ export interface GalleryMedia {
    */
   webPath: string;
   /**
-   * The format of the image, ex: jpeg, png, gif, mov.
+   * The file extension of the media, ex: jpeg, png, gif, mov.
    *
    * @since 4.2.0
    */
   format: string;
+  /**
+   * The mime type of the media, ex: image/jpeg, image/png, image/gif, video/mov.
+   *
+   * @since 4.2.0
+   */
+  mimeType: string;
 }
 
 export interface GalleryPhoto {
