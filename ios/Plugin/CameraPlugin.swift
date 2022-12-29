@@ -612,8 +612,8 @@ private extension CameraPlugin {
     }
 
     func saveTemporaryFile(_ sourceUrl: URL) throws -> URL {
-        imageCounter += 1
-        let targetURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(imageCounter)-\(sourceUrl.lastPathComponent)")
+        let timestamp = NSDate().timeIntervalSince1970
+        let targetURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(timestamp)-\(sourceUrl.lastPathComponent)")
         try FileManager.default.copyItem(at: sourceUrl, to: targetURL)
         return targetURL
     }
