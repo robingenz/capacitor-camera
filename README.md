@@ -1,5 +1,7 @@
 # @capacitor/camera
 
+> ⚠️ This is a development fork of https://github.com/ionic-team/capacitor-plugins/tree/main/camera.
+
 The Camera API provides the ability to take a photo with the camera or choose an existing one from the photo album.
 
 ## Install
